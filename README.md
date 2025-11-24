@@ -40,6 +40,25 @@ The goal is to fine-tune inventory strategy and pricing using **data-driven insi
 
 ---
 
+## 📏 Evaluation Metrics
+
+To assess model performance, we used two standard regression metrics:
+
+- **RMSE (Root Mean Squared Error):**  
+  Measures the square root of the average squared differences between predicted and actual prices.  
+  - Penalizes larger errors more heavily.  
+  - Lower RMSE indicates better overall accuracy.  
+
+- **MAE (Mean Absolute Error):**  
+  Measures the average absolute differences between predicted and actual prices.  
+  - Easier to interpret (average dollar error).  
+  - Less sensitive to outliers compared to RMSE.  
+
+### Why These Metrics?
+- **RMSE** highlights how well the model handles large deviations (important for luxury or high-value vehicles).  
+- **MAE** provides a straightforward measure of the average prediction error in dollars, making it intuitive for dealership stakeholders.  
+
+---
 ## 📈 Model Comparison
 
 | Model              | RMSE (Price, $) | MAE (Price, $) |
@@ -51,6 +70,11 @@ The goal is to fine-tune inventory strategy and pricing using **data-driven insi
 | Lasso (alpha=0.001)| 6,461.85        | 4,071.03       |
 
 ✅ **XGBoost is the most accurate**, reducing pricing error by ~$1,500 compared to linear models.
+
+✅ **Interpretation:**  
+- XGBoost achieves the lowest RMSE and MAE, meaning it consistently predicts prices with the smallest error margin.  
+- Gradient Boosting performs reasonably well but with ~20% higher error.  
+- Linear, Ridge, and Lasso models are less effective at capturing non-linear depreciation and brand effects.
 
 ---
 
