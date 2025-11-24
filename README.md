@@ -24,6 +24,22 @@ The goal is to fine-tune inventory strategy and pricing using **data-driven insi
 
 ---
 
+## 🛠 Dealer-Facing Recommendations
+
+- **Acquisition Strategy:**  
+  - Prioritize newer, low-mileage vehicles.  
+  - Focus on brands with strong resale premiums.  
+
+- **Pricing Strategy:**  
+  - Use mileage and age tiers to set discounts.  
+  - Apply condition premiums consistently to justify reconditioning costs.  
+
+- **Inventory Mix:**  
+  - Stock more SUVs and trucks (higher average resale).  
+  - Adjust mix by region (e.g., trucks in Texas, hybrids in California).  
+
+---
+
 ## 📈 Model Comparison
 
 | Model              | RMSE (Price, $) | MAE (Price, $) |
