@@ -4,10 +4,33 @@ Repository: [cryoraj/UsedCarPricePrediction](https://github.com/cryoraj/UsedCarP
 
 ---
 
-## 📌 Project Overview
+## 📌 Overview
 This project analyzes a large dataset of used vehicles to identify the key drivers of resale price and build predictive models for dealership stakeholders.  
 The goal is to fine-tune inventory strategy and pricing using **data-driven insights**.
 
+**<span style="color: #ffcccb;">What Drives the Price of a Car?**</span>
+
+---
+## Dataset summary
+---
+- This dataset contains listings for used vehicles and is structured to support price prediction and resale-value analysis. The target variable is price (sale price), and the table includes both numeric and categorical features that capture vehicle attributes, condition, and location.
+
+  - Key features
+  - year — model year (used to derive vehicle age)
+  - price — sale price (target)
+  - odometer / mileage — total miles driven (numeric)
+  - manufacturer — vehicle make (e.g., Toyota, Ford)
+  - model / type — model name and vehicle type (e.g., sedan, SUV, truck)
+  - condition — seller-reported condition (ordinal: poor → like new)
+  - cylinders — engine cylinder count (numeric/ordinal)
+  - fuel — fuel type (gas, diesel, hybrid, electric)
+  - transmission — transmission type (automatic, manual)
+  - drive — drivetrain (FWD, RWD, AWD)
+  - state / location — geographic location of the listing
+  - additional fields — may include color, title status, VIN presence, posting date, and seller type
+
+- The dataset requires standard preprocessing: derive age from year, handle missing values and outliers, encode categorical variables (one‑hot or ordinal where appropriate), and consider log-transforming price for modeling stability.
+- Primary predictors observed: age, mileage, condition, and manufacturer — these drive most of the variance in resale price and are emphasized in the analysis.
 ---
 
 ## 📊 Summary of Findings
